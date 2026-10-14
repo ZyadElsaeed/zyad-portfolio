@@ -42,6 +42,7 @@ h2{font:700 24px/1.2 var(--head);margin:0;position:sticky;top:16px;align-self:st
 ul{margin:8px 0 0;padding-left:20px;color:var(--mute)}li{margin:4px 0}
 .sk p{margin:0 0 14px}.sk b{display:block;font:700 15px var(--head);color:var(--acc2);margin-bottom:2px}
 .proj{padding:22px 0;border-bottom:1px solid var(--line)}.proj:first-child{padding-top:0}
+.proj.t{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center}.th{width:100%;height:auto;display:block;border-radius:14px;background:var(--card);border:1px solid var(--line)}.th .s{fill:var(--bg);stroke:var(--line);stroke-width:1.5}.th .a{fill:var(--acc)}.th .b2{fill:var(--acc2)}.th .m{fill:var(--line)}.th .k{fill:var(--ink)}.th .v{fill:var(--acc2)}
 .proj p{margin:6px 0 10px;color:var(--mute)}
 .stack{font-size:14px;font-weight:600}
 .live{display:inline-block;margin-top:10px;font-weight:600;color:var(--acc)}
@@ -51,7 +52,7 @@ ul{margin:8px 0 0;padding-left:20px;color:var(--mute)}li{margin:4px 0}
 .cta{text-align:center;padding:64px 24px;margin:24px 0 8px;border-radius:28px;background:var(--card);border:1px solid var(--line)}.cta h2{position:static;font:800 clamp(28px,5vw,44px)/1.1 var(--head);margin:0 0 10px}.cta p{color:var(--mute);margin:0 0 26px}
 footer{padding:32px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}.ph{max-width:320px;order:-1}
-section{grid-template-columns:1fr;gap:18px}h2{position:static}nav div a{display:none}}
+section{grid-template-columns:1fr;gap:18px}.proj.t{grid-template-columns:1fr}.th{max-width:280px}h2{position:static}nav div a{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -62,7 +63,7 @@ section{grid-template-columns:1fr;gap:18px}h2{position:static}nav div a{display:
 <header class="hero">
 <div>
 <h1>Zyad Elsaeed</h1>
-<p class="role">Full Stack Mobile &amp; Web Developer — React &amp; Django</p>
+<p class="role">Full Stack Mobile &amp; Web Developer — React &amp; Node.js</p>
 <p class="tag">I build scalable web and mobile products with clean code and modern architecture.</p>
 <div class="btns"><a class="b p" href="#projects">View my projects</a><a class="b" href="#contact">Contact me</a></div>
 </div>
@@ -71,7 +72,7 @@ section{grid-template-columns:1fr;gap:18px}h2{position:static}nav div a{display:
 
 <section id="about"><h2>My story</h2><div class="story">
 <p><span class="ch">The curiosity</span>It started with a simple question: how does code turn into something people actually use? From Damietta, I've been answering it one project at a time.</p>
-<p><span class="ch">The learning</span>Along the way I joined programs that pushed me further. ALX taught me backend development with Python and Django, McKinsey Forward and Aspire Leaders sharpened how I solve problems and lead, and today I'm growing as a React intern at DEPI.</p>
+<p><span class="ch">The learning</span>Along the way I joined programs that pushed me further. ALX taught me backend development, McKinsey Forward and Aspire Leaders sharpened how I solve problems and lead, and today I'm growing as a React intern at DEPI.</p>
 <p><span class="ch">The building</span>Those skills went straight into real products. I develop Daintree, a platform connecting Egyptian furniture makers with timber suppliers, and I created CODEBOX, a YouTube channel that explains programming simply, because teaching is the best test of understanding.</p>
 <p><span class="ch">What's next</span>Now I'm looking for the next story to build: practical, responsive, easy-to-use web and mobile products that solve real problems.</p>
 </div></section>
@@ -91,20 +92,24 @@ section{grid-template-columns:1fr;gap:18px}h2{position:static}nav div a{display:
 
 <section id="skills"><h2>Skills</h2><div class="sk">
 <p><b>Frontend</b>React, React Native, TypeScript, JavaScript (ES6+), HTML5, CSS3, Bootstrap, responsive design, UI/UX</p>
-<p><b>Backend &amp; databases</b>Python, Django, Django REST Framework, Node.js, Express, PHP, PostgreSQL, MySQL, Supabase, SQLite</p>
+<p><b>Backend &amp; databases</b>Node.js, Express, REST APIs, Python, PHP, PostgreSQL, MySQL, Supabase, SQLite</p>
 <p><b>Tools</b>Git &amp; GitHub, Docker, Figma, Postman, Expo, n8n</p>
 </div></section>
 
 <section id="projects"><h2>Projects</h2><div>
 <div class="proj"><h3>Event Management System</h3><p>A web app for creating and managing events, deployed on Vercel.</p><div class="stack">Live demo available</div><a class="live" href="https://event-management-system-alpha-mocha.vercel.app/" target="_blank" rel="noopener">Open live project</a></div>
-<div class="proj"><h3>Daintree B2B Furniture App</h3><p>A B2B platform connecting furniture manufacturers with timber suppliers in Egypt.</p><div class="stack">React Native · Expo · Supabase</div></div>
-<div class="proj"><h3>Task Management REST API</h3><p>A task-tracking API with full endpoint documentation and a role-based permission system.</p><div class="stack">Django · DRF · PostgreSQL</div></div>
-<div class="proj"><h3>Lockify</h3><p>A web app for managing and securing data, with safe authenticated sessions.</p><div class="stack">JavaScript · PHP · MySQL · CSS3</div></div>
-<div class="proj"><h3>Interactive Computer Vision Game</h3><p>A game controlled by the player's face and head movement.</p><div class="stack">Python · OpenCV · Pygame</div></div>
+
+<div class="proj t"><svg class="th" viewBox="0 0 240 160" role="img" aria-label="Mobile app illustration"><rect class="s" x="85" y="8" width="70" height="144" rx="12"/><rect class="a" x="93" y="20" width="54" height="10" rx="3"/><rect class="m" x="93" y="38" width="54" height="30" rx="5"/><rect class="b2" x="97" y="42" width="22" height="22" rx="3"/><rect class="k" x="124" y="46" width="19" height="4" rx="2"/><rect class="k" x="124" y="55" width="12" height="4" rx="2"/><rect class="m" x="93" y="74" width="54" height="30" rx="5"/><rect class="b2" x="97" y="78" width="22" height="22" rx="3"/><rect class="k" x="124" y="82" width="19" height="4" rx="2"/><rect class="k" x="124" y="91" width="12" height="4" rx="2"/><rect class="m" x="93" y="110" width="54" height="30" rx="5"/><rect class="b2" x="97" y="114" width="22" height="22" rx="3"/><rect class="k" x="124" y="118" width="19" height="4" rx="2"/><rect class="k" x="124" y="127" width="12" height="4" rx="2"/></svg><div><h3>Daintree B2B Furniture App</h3><p>A B2B platform connecting furniture manufacturers with timber suppliers in Egypt.</p><div class="stack">React Native · Expo · Supabase</div></div></div>
+
+<div class="proj t"><svg class="th" viewBox="0 0 240 160" role="img" aria-label="REST API illustration"><rect class="s" x="20" y="18" width="200" height="124" rx="10"/><circle class="a" cx="34" cy="31" r="4"/><circle class="b2" cx="46" cy="31" r="4"/><circle class="m" cx="58" cy="31" r="4"/><g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11"><text class="k" x="34" y="62">GET   /api/tasks</text><text class="k" x="34" y="82">POST  /api/tasks</text><text class="k" x="34" y="102">PUT   /api/tasks/:id</text><text class="v" x="34" y="126">200 OK</text></g></svg><div><h3>Task Management REST API</h3><p>A task-tracking API with full endpoint documentation and a role-based permission system.</p><div class="stack">Node.js · Express · PostgreSQL</div></div></div>
+
+<div class="proj t"><svg class="th" viewBox="0 0 240 160" role="img" aria-label="Secure login illustration"><rect class="s" x="24" y="18" width="192" height="124" rx="10"/><rect class="m" x="24" y="18" width="192" height="18" rx="10"/><circle class="a" cx="38" cy="27" r="3.5"/><circle class="b2" cx="50" cy="27" r="3.5"/><path d="M112 70v-8a8 8 0 0 1 16 0v8" fill="none" stroke="var(--acc)" stroke-width="4" stroke-linecap="round"/><rect class="a" x="106" y="70" width="28" height="24" rx="5"/><rect class="m" x="64" y="104" width="112" height="10" rx="5"/><rect class="m" x="64" y="120" width="112" height="10" rx="5"/></svg><div><h3>Lockify</h3><p>A web app for managing and securing data, with safe authenticated sessions.</p><div class="stack">JavaScript · PHP · MySQL · CSS3</div></div></div>
+
+<div class="proj t"><svg class="th" viewBox="0 0 240 160" role="img" aria-label="Face tracking game illustration"><rect class="s" x="20" y="16" width="200" height="128" rx="10"/><circle class="b2" cx="48" cy="42" r="8"/><circle class="a" cx="192" cy="104" r="8"/><circle class="m" cx="120" cy="80" r="26"/><circle class="k" cx="110" cy="73" r="3"/><circle class="k" cx="130" cy="73" r="3"/><path d="M110 88q10 8 20 0" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/><rect x="88" y="48" width="64" height="64" rx="4" fill="none" stroke="var(--acc)" stroke-width="2" stroke-dasharray="6 4"/><circle class="a" cx="88" cy="48" r="3"/><circle class="a" cx="152" cy="48" r="3"/><circle class="a" cx="88" cy="112" r="3"/><circle class="a" cx="152" cy="112" r="3"/></svg><div><h3>Interactive Computer Vision Game</h3><p>A game controlled by the player's face and head movement.</p><div class="stack">Python · OpenCV · Pygame</div></div></div>
 </div></section>
 
 <section id="certs"><h2>Programs &amp; certificates</h2><ul class="cert">
-<li>ALX Alumni — Backend Web Development (Django/Python)</li>
+<li>ALX Alumni — Backend Web Development</li>
 <li>Digital Egypt Pioneers Initiative — React Frontend track</li>
 <li>McKinsey Forward Program — Problem solving &amp; business agility</li>
 <li>Aspire Leaders Program certificate (2025)</li>
